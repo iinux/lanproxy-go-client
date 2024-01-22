@@ -16,6 +16,7 @@ if hash upx 2>/dev/null; then
 fi
 
 VERSION=`date -u +%Y%m%d`
+VERSION='1'
 LDFLAGS="-X main.VERSION=$VERSION -s -w"
 GCFLAGS=""
 
