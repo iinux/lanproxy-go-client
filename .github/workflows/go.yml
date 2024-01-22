@@ -27,16 +27,16 @@ jobs:
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: ${{ github.ref }}
-        name: Release ${{ github.ref }}
+        tag_name: v1
+        name: Release v1
         body: TODO New Release.
         draft: false
         prerelease: false
         files: |
-          ./src/main/lanproxy-client-darwin-amd64-20180721.tar.gz
-          ./src/main/lanproxy-client-freebsd-amd64-20180721.tar.gz
-          ./src/main/lanproxy-client-linux-amd64-20180721.tar.gz
-          ./src/main/lanproxy-client-windows-amd64-20180721.tar.gz
-          ./src/main/lanproxy-client-linux-arm-20180721.tar.gz
-          ./src/main/lanproxy-client-linux-mips-20180721.tar.gz
-          ./src/main/lanproxy-client-linux-mipsle-20180721.tar.gz
+          ./src/main/lanproxy-client-darwin-amd64-1.tar.gz
+          ./src/main/lanproxy-client-freebsd-amd64-1.tar.gz
+          ./src/main/lanproxy-client-linux-amd64-1.tar.gz
+          ./src/main/lanproxy-client-windows-amd64-1.tar.gz
+          ./src/main/lanproxy-client-linux-arm-1.tar.gz
+          ./src/main/lanproxy-client-linux-mips-1.tar.gz
+          ./src/main/lanproxy-client-linux-mipsle-1.tar.gz
