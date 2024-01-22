@@ -46,6 +46,11 @@ if $UPX; then upx -9 client_linux_arm* server_linux_arm*;fi
 tar -zcf lanproxy-client-linux-arm-$VERSION.tar.gz client_linux_arm*
 $sum lanproxy-client-linux-arm-$VERSION.tar.gz
 
+# Mac ARM
+env CGO_ENABLED=0 GOOS=darwin GOARCH=arm64 go build -ldflags "$LDFLAGS" -gcflags "$GCFLAGS" -o client_darwin_arm64
+tar -zcf lanproxy-client-darwin-arm64-$VERSION.tar.gz client_darwin_arm64
+$sum lanproxy-client-darwin-arm64-$VERSION.tar.gz
+
 #MIPS32LE
 env CGO_ENABLED=0 GOOS=linux GOARCH=mipsle go build -ldflags "$LDFLAGS" -gcflags "$GCFLAGS" -o client_linux_mipsle
 env CGO_ENABLED=0 GOOS=linux GOARCH=mips go build -ldflags "$LDFLAGS" -gcflags "$GCFLAGS" -o client_linux_mips
